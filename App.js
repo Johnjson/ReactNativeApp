@@ -7,15 +7,18 @@
 */
 
 import React, {Component} from 'react';
+import { Router, Scene } from 'react-native-router-flux';
 import CodePush from "react-native-code-push"; // 引入code-push
 import {
   Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  TouchableHighlight,
-  Alert} from 'react-native';
+  } from 'react-native';
+
+
+  import PageOne from "./app/PageOne";
+  import PageTwo from "./app/PageTwo";
+  import PageThree from "./app/PageThree";
+  import FeedBackPage from "./app/FeedBackPage";
+
 
 
   const instructions = Platform.select({
@@ -26,8 +29,7 @@ import {
     });
 
 
-    type Props = {};
-      export default class App extends Component<Props> {
+      export default class App extends Component{
 
         syncImmediate() {
           CodePush.sync( {
@@ -57,8 +59,6 @@ import {
               } ,
               } ,
               );
-
-
             }
 
             componentWillMount() {
@@ -70,73 +70,28 @@ import {
               CodePush.allowRestart();//在加载完了，允许重启
             }
 
-
-
             render() {
               return (
-                <ScrollView style ={styles.container} contentContainerStyle={styles.content}>
-                {
-                  dataList.map((item, index) => {
-                    return (
-                      <TouchableHighlight key={index} underlayColor={'#dcdcdc'} >
-                      <View style={styles.flexItem}>
-                      <Text style={styles.itemTitle}>{item}</Text>
-                      </View>
-                      </TouchableHighlight>
-                      )
-                      })
-                    }
-                    </ScrollView>
-                    );
-                  }
-                }
+                <Router>
+                    {/* 这种写法是将全部的跳转页面都放在Root下面 */}
+                    <Scene key="root">
+                      {/* key 就是给页面的标签,供Actions使用 */}
+                      {/* component 设置关联的页面 */}
+                      {/* title 就是给页面标题 */}
+                      {/* initial 就是设置默认页面*/}
+                      <Scene
+                        key="one"
+                        component={PageOne}
+                        title="React Native学习之路"
+                        initial={true}
+                      />
+                      <Scene key="two" component={PageTwo} title="PageTwo" />
+                      <Scene key="three" component={PageThree} title="PageThree" />
+                      <Scene key="feedBack" component={FeedBackPage} title="反馈界面" />
 
+                    </Scene>
+               </Router>
+                );
+              }
 
-                const dataList = [
-                'RN传递数据',
-                'RN的ListView',
-                'RN的FlatList',
-                'RN的SectionList',
-                'RN的PullRefresh',
-                'RN的Navigattion',
-                'RN的TextInput',
-                'RN的VideoPlayer',
-                'RN的IconFont',
-                'RN的SqlistStorage',
-                'RN的QRCodeScanGenerate',
-                'RN的PushNotification',
-                'RN的Wechat_lohin_share_pay',
-                'RN的Animation'
-                ];
-
-
-                const styles = StyleSheet.create({
-
-                  container: {
-                    flex: 1,
-                    },
-                    content: {
-                      backgroundColor: '#eeeeee',
-                      },
-                      sectionTitle: {
-                        fontSize: 16,
-                        fontWeight:'bold',
-                        color:'#101010',
-                        marginTop: 30,
-                        marginLeft: 10,
-                        marginBottom: 10,
-                        marginRight: 10
-                        },
-                        flexItem: {
-                          backgroundColor:'white',
-                          flexDirection:'row',
-                          alignItems:'center',
-                          padding: 10,
-                          borderBottomColor: '#d4d5d6',
-                          borderBottomWidth: 1,
-                          },
-                          itemTitle: {
-                            fontSize: 16,
-                            color:'#666'
-                          }
-                          });
+            }
