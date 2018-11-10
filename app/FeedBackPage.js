@@ -14,6 +14,7 @@ import {
   TextInput,
   Keyboard,
   Image,
+  Alert,
   View
 } from 'react-native';
 
@@ -34,16 +35,19 @@ export default class FeedBackPage extends Component {
           numberOfLines={10}
           multiline = {true}
 
-
         />
+
+        <ScrollView style={styles.container} contentContainerStyle={styles.content}>
         <View style={styles.flex} style={styles.flexDirection}  >
 
-          <Image style={styles.imageView} source={require('./img/guide_1.webp')} />
-          <Image style={styles.imageView} source={require('./img/guide_2.webp')} />
-          <Image style={styles.imageView} source={require('./img/guide_3.webp')} />
-          <Image style={styles.imageView} source={require('./img/guide_4.webp')} />
-
-        </View>
+          {/* <Image style={styles.imageView} source={require('./img/guide_1.webp')} /> */}
+          <Image style={styles.imageView} source={{uri:'http://newtab.firefoxchina.cn/img/sitenav/logo.png'}} />
+          <Image style={styles.imageView} source={require('./img/icon_2.png')} />
+          <Image style={styles.imageView} source={require('./img/icon_3.png')} />
+          <Image style={styles.imageView} source={require('./img/icon_4.png')} />
+          </View>
+          </ScrollView>
+        
         <View style={styles.flex} style={styles.flexDirection}  >
           <Text style={styles.textshow} onPress={this.dissmissKeyboardEvent.bind(this)}> 联系电话 </Text>
           <TextInput
@@ -54,10 +58,14 @@ export default class FeedBackPage extends Component {
           />
         </View>
 
-        <Text style={styles.flex} style={styles.flexDirection} style={styles.textshow1} onPress={this.dissmissKeyboardEvent.bind(this)}> 直接与客服联系 </Text>
+        <Text style={styles.flex} style={styles.flexDirection} style={styles.textshow1}   onPress={() => this.showAlert("直接与客服联系")}> 直接与客服联系 </Text>
       </ScrollView>
 
     );
+  }
+
+  showAlert(msg) {
+    Alert.alert("显示结果", msg, [{text:'确定'}], {cancelable: false});
   }
 
 
