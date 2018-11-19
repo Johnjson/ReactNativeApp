@@ -7,13 +7,10 @@
 */
 
 import React, { Component } from 'react';
-import { Actions } from 'react-native-router-flux';
-
 import {
   StyleSheet,
   Text,
   View,
-  AppRegistry,
 } from 'react-native';
 
 
@@ -47,5 +44,3 @@ const styles = StyleSheet.create({
 
 });
 
-
-AppRegistry.registerComponent('PageTwo', () => PageTwo);

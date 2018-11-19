@@ -47,11 +47,12 @@ export default class PageOne extends Component {
   sectionOneItemClicked(index) {
     switch (index) {
       case 0:
-        Actions.feedBack()
+        Actions.viewCreat()
 
         break;
       case 1:
-
+        Actions.lifeCycleView();
+        
         break;
       case 2:
 
@@ -65,7 +66,8 @@ export default class PageOne extends Component {
 }
 
 const dataList = [
-  'RN反馈界面',
+  'RN之组件生成的三种方式',
+  'RN之组件的生命周期',
   'RN传递数据',
   'RN的ListView',
   'RN的FlatList',
@@ -124,5 +126,3 @@ const styles = StyleSheet.create({
 });
 
 
-
-AppRegistry.registerComponent('PageOne', () => PageOne);
