@@ -11,21 +11,20 @@ import {
 // }
 // module.exports = HelloWord;
 
-
-
 //ES5
-// var HelloWord = React.createClass({
-//     render(){
-//     return  <Text style={{fontSize:26}}>Hello Word</Text>
-//     }
-// })
-// module.exports = HelloWord;
+var createReactClass = require('create-react-class')
+var HelloWord = createReactClass({
+    render: function() {
+        return  <Text style={{fontSize:26}}>Hello Word</Text>
+    }
+});
+module.exports = HelloWord;
 
 
 
 // //ES6
-export default class HelloWord extends Component{
-    render(){
-    return  <Text style={{fontSize:26}}>Hello Word</Text>
-    }
-}
+// export default class HelloWord extends Component{
+//     render(){
+//     return  <Text style={{fontSize:26}}>Hello Word</Text>
+//     }
+// }
