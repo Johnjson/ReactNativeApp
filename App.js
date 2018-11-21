@@ -15,24 +15,16 @@ import {
 
 
 import PageOne from "./app/PageOne";
-import PageTwo from "./app/PageTwo";
-import PageThree from "./app/PageThree";
-import ViewCreat from "./app/ViewCreat";
-import LifeCycleView from "./app/LifeCycleView";
-
-
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import PageTwo from "./app/other/PageTwo";
+import PageThree from "./app/other/PageThree";
+import ViewCreat from "./app/creatcomponent/ViewCreat";
+import LifeCycleView from "./app/lifecycle/LifeCycleView";
 
 
 export default class App extends Component {
 
   syncImmediate() {
+    
     CodePush.sync({
       //安装模式
       //ON_NEXT_RESUME 下次恢复到前台时
