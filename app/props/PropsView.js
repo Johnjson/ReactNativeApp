@@ -6,9 +6,11 @@ import {
 import PropsUse from './PropsUse';
 export default class PropsView extends Component {
     render() {
-
+        var  params = {name:'zhangsan', age:19,sex:'女'}
+        var {name,sex} = params;
         return <View>
-                <PropsUse name="张三"/>
+                {/* <PropsUse {...params}/> */}
+                <PropsUse name={name} sex={sex}/>
             </View>
     }
 }
