@@ -21,7 +21,7 @@ import {
 
 
 
-export default class PageOne extends Component {
+export default class SetUp extends Component {
 
   render() {
     return (

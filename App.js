@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 
 
-import PageOne from "./app/PageOne";
+import SetUp from "./app/SetUp";
 import PageTwo from "./app/other/PageTwo";
 import PageThree from "./app/other/PageThree";
 import ViewCreat from "./app/creatcomponent/ViewCreat";
@@ -24,7 +24,7 @@ import LifeCycleView from "./app/lifecycle/LifeCycleView";
 export default class App extends Component {
 
   syncImmediate() {
-    
+
     CodePush.sync({
       //安装模式
       //ON_NEXT_RESUME 下次恢复到前台时
@@ -73,8 +73,8 @@ export default class App extends Component {
           {/* title 就是给页面标题 */}
           {/* initial 就是设置默认页面*/}
           <Scene
-            key="one"
-            component={PageOne}
+            key="setup"
+            component={SetUp}
             title="React Native学习之路"
             initial={true}
           />
