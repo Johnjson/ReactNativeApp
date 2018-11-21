@@ -47,15 +47,13 @@ export default class SetUp extends Component {
   sectionOneItemClicked(index) {
     switch (index) {
       case 0:
-        Actions.viewCreat()
-
+        Actions.viewCreat();
         break;
       case 1:
         Actions.lifeCycleView();
-        
         break;
       case 2:
-
+        Actions.propsview();
         break;
       default:
 
@@ -68,6 +66,7 @@ export default class SetUp extends Component {
 const dataList = [
   'RN之组件生成的三种方式',
   'RN之组件的生命周期',
+  'RN之props的使用',
   'RN传递数据',
   'RN的ListView',
   'RN的FlatList',

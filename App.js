@@ -19,7 +19,7 @@ import PageTwo from "./app/other/PageTwo";
 import PageThree from "./app/other/PageThree";
 import ViewCreat from "./app/creatcomponent/ViewCreat";
 import LifeCycleView from "./app/lifecycle/LifeCycleView";
-
+import PropsView from "./app/props/PropsView";
 
 export default class App extends Component {
 
@@ -82,7 +82,7 @@ export default class App extends Component {
           <Scene key="three" component={PageThree} title="PageThree" />
           <Scene key="viewCreat" component={ViewCreat} title="ViewCreat" />
           <Scene key="lifeCycleView" component={LifeCycleView} title="LifeCycleView" />
-
+          <Scene key="propsview" component={PropsView} title="PropsView" />
 
 
         </Scene>
