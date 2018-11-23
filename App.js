@@ -20,7 +20,7 @@ import PageThree from "./app/other/PageThree";
 import ViewCreat from "./app/creatcomponent/ViewCreat";
 import LifeCycleView from "./app/lifecycle/LifeCycleView";
 import PropsView from "./app/props/PropsView";
-
+import StateTest from "./app/state/StateTest";
 export default class App extends Component {
 
   syncImmediate() {
@@ -83,6 +83,8 @@ export default class App extends Component {
           <Scene key="viewCreat" component={ViewCreat} title="ViewCreat" />
           <Scene key="lifeCycleView" component={LifeCycleView} title="LifeCycleView" />
           <Scene key="propsview" component={PropsView} title="PropsView" />
+          <Scene key="statetest" component={StateTest} title="StateTest" />
+
 
 
         </Scene>

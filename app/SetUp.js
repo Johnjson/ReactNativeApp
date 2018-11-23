@@ -16,7 +16,7 @@ import {
   View,
   AppRegistry,
   TouchableHighlight,
-  
+
 } from 'react-native';
 
 
@@ -55,6 +55,9 @@ export default class SetUp extends Component {
       case 2:
         Actions.propsview();
         break;
+      case 3:
+        Actions.statetest();
+        break;
       default:
 
         break;
@@ -67,6 +70,7 @@ const dataList = [
   'RN之组件生成的三种方式',
   'RN之组件的生命周期',
   'RN之props的使用',
+  'RN之state的使用',
   'RN传递数据',
   'RN的ListView',
   'RN的FlatList',
@@ -103,7 +107,7 @@ const styles = StyleSheet.create({
   flexItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft:20,
+    marginLeft: 20,
     padding: 10,
     borderBottomColor: '#d4d5d6',
     borderBottomWidth: 1,
@@ -115,8 +119,8 @@ const styles = StyleSheet.create({
   flexTitle: {
     flexDirection: 'row',
     alignItems: 'center',
-    alignContent:"center",
-    marginLeft:70,
+    alignContent: "center",
+    marginLeft: 70,
     padding: 10,
     borderBottomColor: '#d4d5d6',
     fontSize: 18,
