@@ -9,7 +9,6 @@
 import React, { Component } from 'react';
 import { Actions } from 'react-native-router-flux';
 import {
-
   ScrollView,
   StyleSheet,
   Text,
