@@ -9,15 +9,6 @@ import StateTestView from './StateTestView';
 
 export default class StateTest extends Component {
 
-    // state = {
-    //     size:70,
-    // }
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         size: 60,
-    //     }
-    // }
     render() {
 
         return <View>

@@ -57,6 +57,9 @@ export default class SetUp extends Component {
       case 3:
         Actions.statetest();
         break;
+      case 4:
+        Actions.refTest();
+        break;
       default:
 
         break;
@@ -70,6 +73,7 @@ const dataList = [
   'RN之组件的生命周期',
   'RN之props的使用',
   'RN之state的使用',
+  'RN之ref的使用',
   'RN传递数据',
   'RN的ListView',
   'RN的FlatList',

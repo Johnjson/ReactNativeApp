@@ -8,17 +8,21 @@ import {
 } from 'react-native';
 
 
-export default class StateTestView extends Component {
+export default class RefTestView extends Component {
 
     state = {
         size: 70,
     }
 
-    constructor(props) {
-        super(props);
-        // this.state ={
-        //     size:60,
-        // }
+    // constructor(props) {
+    //     super(props);
+    //     // this.state ={
+    //     //     size:60,
+    //     // }
+    // }
+
+    getSize(){
+        return this.state.size;
     }
     render() {
 
@@ -30,8 +34,8 @@ export default class StateTestView extends Component {
                         size: this.state.size + 10
                     })
                 }}
-            >我打呀打呀 </Text>
-            <Image style={{ width:this.state.size, height:this.state.size ,top:30}} source={require('../state/image/qiqiu.png')} />
+            > 我打呀打呀 </Text>
+            <Image style={{ width:this.state.size, height:this.state.size ,marginTop:30}} source={require('../state/image/qiqiu.png')} />
         </View>
     }
 }
