@@ -26,12 +26,13 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
           new CodePush("d5aF7un7uOf6rt6bPFoWG1INAVPnc9354890-07db-4e76-926a-7b93c6f74cc0", MainApplication.this, BuildConfig.DEBUG)
+
       );
     }
 
     @Override
     protected String getJSBundleFile() {
-      return CodePush.getJSBundleFile();
+      return  CodePush.getJSBundleFile();
     }
 
     @Override
@@ -44,6 +45,7 @@ public class MainApplication extends Application implements ReactApplication {
   public ReactNativeHost getReactNativeHost() {
     return mReactNativeHost;
   }
+
 
   @Override
   public void onCreate() {

@@ -20,13 +20,14 @@ import {
 
 
 
+
 export default class SetUp extends Component {
 
   render() {
     return (
 
       <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-        <Text style={styles.flexTitle} onPress={() => Actions.two()} >React Native学习之路</Text>
+        <Text style={styles.flexTitle} onPress={() => Actions.two()} >React Native学习之路111111</Text>
         {
           dataList.map((item, index) => {
             return (
@@ -60,12 +61,13 @@ export default class SetUp extends Component {
       case 4:
         Actions.refTest();
         break;
+      case 5:
+        Actions.copyContent();
+        break;
       default:
-
         break;
     }
   }
-
 }
 
 const dataList = [
@@ -74,6 +76,7 @@ const dataList = [
   'RN之props的使用',
   'RN之state的使用',
   'RN之ref的使用',
+  'RN之Clipboard的使用',
   'RN传递数据',
   'RN的ListView',
   'RN的FlatList',

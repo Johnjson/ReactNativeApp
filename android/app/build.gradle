@@ -115,7 +115,11 @@ android {
             include "armeabi-v7a", "x86"
         }
     }
+
+
     buildTypes {
+
+        debug {}
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
@@ -142,6 +146,7 @@ dependencies {
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':react-native-code-push')
+//    implementation project(':react-native-update')
 
 }
 

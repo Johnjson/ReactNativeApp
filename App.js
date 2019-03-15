@@ -22,6 +22,7 @@ import LifeCycleView from "./app/lifecycle/LifeCycleView";
 import PropsView from "./app/props/PropsView";
 import StateTest from "./app/state/StateTest";
 import RefTest from "./app/refdome/RefTest";
+import CopyContent from "./app/copy/CopyContent";
 
 export default class App extends Component {
 
@@ -87,6 +88,7 @@ export default class App extends Component {
           <Scene key="propsview" component={PropsView} title="PropsView" />
           <Scene key="statetest" component={StateTest} title="StateTest" />
           <Scene key="refTest" component={RefTest} title="RefTest" />
+          <Scene key="copyContent" component={CopyContent} title="CopyContent" />
 
         </Scene>
       </Router>
